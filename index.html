@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Family | خانه اعضا</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">Family<span>.</span></a>
+    <nav><a href="#members">اعضای خانواده</a><button id="logoutBtn" class="quiet hidden">خروج</button></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">یک جامعه، کنار هم</div>
+      <h1>به خانواده <span>Family</span> خوش آمدی</h1>
+      <p>یک حساب بساز، وارد شو و اعضای جامعه را بشناس.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#account">شروع عضویت</a>
+        <a class="button secondary" href="#members">دیدن اعضا</a>
+      </div>
+    </section>
+
+    <section id="account" class="panel auth-panel">
+      <div class="section-heading">
+        <div><div class="eyebrow">حساب کاربری</div><h2 id="formTitle">عضویت در Family</h2></div>
+        <div class="switch"><button id="registerTab" class="active">ثبت‌نام</button><button id="loginTab">ورود</button></div>
+      </div>
+      <form id="authForm">
+        <label id="usernameLabel">نام کاربری<input id="username" name="username" minlength="3" maxlength="20" autocomplete="username" placeholder="مثلاً ali_23" required></label>
+        <label id="emailLabel">ایمیل<input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required></label>
+        <label>رمز عبور<input id="password" name="password" type="password" minlength="8" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر" required></label>
+        <button class="button primary submit" type="submit" id="submitBtn">ساخت حساب</button>
+        <p id="message" class="message" role="status"></p>
+      </form>
+      <p class="privacy">شماره تلفن لازم نیست. ایمیل و رمز عبور اعضا در فهرست عمومی نمایش داده نمی‌شود.</p>
+    </section>
+
+    <section id="members" class="members-section">
+      <div class="section-heading"><div><div class="eyebrow">جامعه ما</div><h2>اعضای Family</h2></div><span id="memberCount" class="count">۰ عضو</span></div>
+      <div id="membersList" class="member-grid"><div class="empty">در حال بارگذاری اعضا...</div></div>
+    </section>
+  </main>
+  <footer>Family <span>·</span> فضایی برای کنار هم بودن</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
