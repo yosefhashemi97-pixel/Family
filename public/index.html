@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Family | خانواده ما</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">Family</a>
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#members">اعضا</a>
+    <a href="#messages">پیام‌ها</a>
+    <a href="#events">مناسبت‌ها</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="eyebrow">جامعه‌ای برای کنار هم بودن</div>
+  <h1>به خانواده <span>Family</span> خوش آمدی</h1>
+  <p>یک حساب بساز، وارد شو و اعضای خانواده را بشناس.</p>
+</section>
+
+<section class="panel" id="auth">
+  <h2>عضویت در Family</h2>
+
+  <div class="auth-tabs">
+    <button id="showRegister">ثبت‌نام</button>
+    <button id="showLogin">ورود</button>
+  </div>
+
+  <form id="registerForm">
+    <input id="regName" placeholder="نام شما" required>
+    <input id="regEmail" type="email" placeholder="ایمیل" required>
+    <input id="regPassword" type="password" placeholder="رمز عبور" required minlength="8">
+    <button type="submit">ساخت حساب</button>
+  </form>
+
+  <form id="loginForm" hidden>
+    <input id="loginEmail" type="email" placeholder="ایمیل" required>
+    <input id="loginPassword" type="password" placeholder="رمز عبور" required>
+    <button type="submit">ورود به حساب</button>
+  </form>
+
+  <p id="authMessage"></p>
+</section>
+
+<section class="panel" id="dashboard" hidden>
+  <h2>خوش آمدی <span id="welcomeName"></span></h2>
+  <p>به فضای خانوادگی Family خوش آمدی.</p>
+  <button id="logoutBtn">خروج از حساب</button>
+</section>
+
+<section class="panel" id="members">
+  <h2>اعضای خانواده</h2>
+  <div id="membersList">
+    <p>هنوز عضوی ثبت نشده است.</p>
+  </div>
+</section>
+
+<section class="panel" id="messages">
+  <h2>پیام‌های خانواده</h2>
+  <div id="messagesList">
+    <p>هنوز پیامی وجود ندارد.</p>
+  </div>
+  <form id="messageForm">
+    <input id="messageInput" placeholder="پیام خود را بنویس..." required>
+    <button type="submit">ارسال پیام</button>
+  </form>
+</section>
+
+<section class="panel" id="events">
+  <h2>مناسبت‌های خانوادگی</h2>
+  <p>اینجا می‌توانیم تولدها و دورهمی‌های خانواده را ثبت کنیم.</p>
+  <form id="eventForm">
+    <input id="eventName" placeholder="نام مناسبت" required>
+    <input id="eventDate" type="date" required>
+    <button type="submit">ثبت مناسبت</button>
+  </form>
+  <div id="eventsList"></div>
+</section>
+
+</main>
+
+<footer>
+  <p>Family | کنار هم، یک خانواده</p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
